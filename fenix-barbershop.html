@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Fenix Barbershop | The Modern Atelier</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#93000a",
+            "on-primary-container": "#524100",
+            "on-surface": "#e9e2d5",
+            "surface-bright": "#3c3930",
+            surface: "#16130c",
+            "primary-container": "#cdad45",
+            "secondary-container": "#52461f",
+            "surface-container-highest": "#38342c",
+            "inverse-on-surface": "#343028",
+            "surface-container-low": "#1e1b14",
+            "on-surface-variant": "#cfc6b1",
+            "surface-dim": "#16130c",
+            "on-tertiary-fixed": "#051058",
+            "primary-fixed-dim": "#e5c459",
+            "surface-container-high": "#2d2a22",
+            "on-tertiary-container": "#333d81",
+            tertiary: "#c2c8ff",
+            "on-secondary": "#3a2f0a",
+            background: "#16130c",
+            "on-error": "#690005",
+            "on-secondary-fixed-variant": "#52461f",
+            "secondary-fixed": "#f5e1ad",
+            "on-tertiary": "#1f296d",
+            "primary-fixed": "#ffe084",
+            "on-secondary-container": "#c6b483",
+            "tertiary-fixed-dim": "#bbc3ff",
+            "inverse-surface": "#e9e2d5",
+            "on-error-container": "#ffdad6",
+            "surface-tint": "#e5c459",
+            secondary: "#d8c593",
+            "on-tertiary-fixed-variant": "#374185",
+            "outline-variant": "#4c4636",
+            outline: "#98907d",
+            "tertiary-fixed": "#dfe0ff",
+            "inverse-primary": "#735c00",
+            "surface-container": "#221f18",
+            "on-background": "#e9e2d5",
+            "on-secondary-fixed": "#231b00",
+            "on-primary-fixed-variant": "#574500",
+            error: "#ffb4ab",
+            "surface-container-lowest": "#100e07",
+            "on-primary": "#3c2f00",
+            "tertiary-container": "#a1abf7",
+            primary: "#eac85d",
+            "surface-variant": "#38342c",
+            "on-primary-fixed": "#231b00",
+            "secondary-fixed-dim": "#d8c593"
+          },
+          fontFamily: {
+            headline: ["Noto Serif"],
+            body: ["Manrope"],
+            label: ["Manrope"],
+            display: "Noto Serif"
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+            lg: "1rem",
+            xl: "1.5rem",
+            full: "9999px"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #131313;
+      color: #e2e2e2;
+    }
+    .font-serif { font-family: 'Noto Serif', serif; }
+    .gold-gradient { background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%); }
+    .gold-glow:hover { box-shadow: 0px 0px 20px rgba(242, 202, 80, 0.3); }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .fill-icon { font-variation-settings: 'FILL' 1; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #131313; }
+    ::-webkit-scrollbar-thumb { background: #4d4635; }
+  </style>
+</head>
+
+<body class="selection:bg-primary selection:text-on-primary">
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-md">
+    <div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+
+      <div class="text-2xl font-serif italic text-[#d4af37]">Fenix Barbershop</div>
+
+      <div class="hidden md:flex space-x-10 items-center">
+        <a href="#services" class="text-[#f2ca50] font-bold border-b-2 border-[#f2ca50] pb-1 font-sans uppercase tracking-[0.1em] text-[12px]">Services</a>
+        <a href="#gallery"  class="text-[#99907c] hover:text-[#f2ca50] transition-colors duration-300 font-sans uppercase tracking-[0.1em] text-[12px]">Gallery</a>
+        <a href="#about"    class="text-[#99907c] hover:text-[#f2ca50] transition-colors duration-300 font-sans uppercase tracking-[0.1em] text-[12px]">About</a>
+      </div>
+
+      <button class="gold-gradient text-on-primary px-8 py-3 text-[12px] uppercase tracking-widest font-bold gold-glow transition-all duration-200 active:scale-95">
+        Book Now
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="relative h-[1024px] w-full flex items-center overflow-hidden">
+
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://i.pinimg.com/736x/8a/36/c1/8a36c1fe02df62cdad2e70dff2f6e43e.jpg"
+        alt="Master barber at work"
+        class="w-full h-full object-cover brightness-50"
+      >
+    </div>
+
+    <div class="relative z-10 px-8 md:px-24 w-full max-w-7xl mx-auto">
+      <div class="max-w-3xl">
+        <span class="text-primary uppercase tracking-[0.3em] text-sm mb-6 block font-bold">The Modern Atelier</span>
+        <h1 class="font-serif text-6xl md:text-8xl leading-tight mb-8">Tu estilo, nuestra precisión</h1>
+        <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-xl mb-12 leading-relaxed">
+          Experiencia premium de barbería diseñada para el caballero contemporáneo.
+        </p>
+        <div class="flex flex-col md:flex-row gap-6">
+          <button class="gold-gradient text-on-primary px-12 py-5 text-sm uppercase tracking-widest font-extrabold gold-glow">
+            Agendar cita
+          </button>
+          <button class="border border-primary text-primary px-12 py-5 text-sm uppercase tracking-widest font-extrabold hover:bg-primary/10 transition-colors">
+            Ver Servicios
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" class="py-32 bg-surface">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+
+      <!-- Text -->
+      <div class="md:col-span-5">
+        <h2 class="font-serif text-5xl mb-8 border-l-4 border-primary pl-8">Legado de Precisión</h2>
+        <p class="font-body text-lg text-on-surface-variant mb-8 leading-relaxed">
+          En Fenix Barbershop, no solo cortamos el cabello; esculpimos identidades. Nuestra filosofía se basa en la atención obsesiva al detalle y el respeto por las técnicas clásicas, fusionadas con las tendencias más vanguardistas de la moda masculina.
+        </p>
+        <div class="grid grid-cols-1 gap-6">
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary text-3xl">verified</span>
+            <div>
+              <h4 class="font-bold text-lg uppercase tracking-wider text-primary">Calidad</h4>
+              <p class="text-outline">Productos de grado profesional y herramientas de alta gama.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary text-3xl">content_cut</span>
+            <div>
+              <h4 class="font-bold text-lg uppercase tracking-wider text-primary">Estilo</h4>
+              <p class="text-outline">Asesoría personalizada basada en tu fisionomía y estilo de vida.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="md:col-span-7 relative">
+        <div class="aspect-[4/5] bg-surface-container-low overflow-hidden relative translate-x-4 translate-y-4">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhiqI1G1po8o25DSIgn4BK-kHPiaFi3AsgD4v6J7U2k4wwKb3Xz14_-aLd2YpP947_AIbeBEmHVrVVS60sV6yYqsRRKssEYOX3awxQRTD8fXKRSNltAVjlcgt4nvnNLTHBbuOXvAgHO9sxxR-QXnZwuirqi-gUtOZ6kjd9YCD6sa73cqhAGhrDVXCaPnG8gen4xNu03npgJvMc3ssmNDJQ1KD2MbunRYjvzuz2yTiMjNzDpv-Is5sG_r5AiS2D3Q2J-F_L4-cnQUs"
+            alt="Barbershop interior"
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <div class="absolute inset-0 border border-primary/30 -translate-x-4 -translate-y-4 -z-10"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─── -->
+  <section id="services" class="py-32 bg-surface-container-lowest">
+    <div class="max-w-7xl mx-auto px-8">
+
+      <div class="flex justify-between items-end mb-20">
+        <div>
+          <span class="text-primary uppercase tracking-widest text-sm font-bold block mb-4">Our Menu</span>
+          <h2 class="font-serif text-5xl">Nuestros Servicios</h2>
+        </div>
+        <div class="hidden md:block text-right">
+          <p class="text-outline uppercase tracking-widest text-xs">Precisión en cada detalle</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Corte de Cabello -->
+        <div class="group bg-surface-container hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden border border-outline-variant/10 flex flex-col h-full rounded-none">
+          <div class="aspect-[3/2] overflow-hidden">
+            <img
+              src="https://i.pinimg.com/1200x/5f/71/2a/5f712a241080b54e13224a6a58f118e5.jpg"
+              alt="Corte de Cabello"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+            >
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <h3 class="font-serif text-2xl mb-4 group-hover:text-primary transition-colors">Corte de Cabello</h3>
+            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+              Un corte preciso y personalizado que define tu estilo único. Incluye perfilado de cejas.
+            </p>
+            <div class="flex justify-between items-center mt-auto border-t border-outline-variant/20 pt-6">
+              <span class="font-serif text-2xl text-primary">$150</span>
+              <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Barba -->
+        <div class="group bg-surface-container hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden border border-outline-variant/10 flex flex-col h-full rounded-none">
+          <div class="aspect-[3/2] overflow-hidden">
+            <img
+              src="https://i.pinimg.com/736x/12/51/e5/1251e51301afa8100a459e41e1eb8acc.jpg"
+              alt="Barba"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+            >
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <h3 class="font-serif text-2xl mb-4 group-hover:text-primary transition-colors">Barba</h3>
+            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+              Ritual completo de cuidado y perfilado para una barba impecable. Incluye perfilado de cejas.
+            </p>
+            <div class="flex justify-between items-center mt-auto border-t border-outline-variant/20 pt-6">
+              <span class="font-serif text-2xl text-primary">$100</span>
+              <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diseños -->
+        <div class="group bg-surface-container hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden border border-outline-variant/10 flex flex-col h-full rounded-none">
+          <div class="aspect-[3/2] overflow-hidden">
+            <img
+              src="https://i.pinimg.com/1200x/3a/34/6d/3a346da8ac7adcf1f9c1dda48f03c099.jpg"
+              alt="Diseños"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+            >
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <h3 class="font-serif text-2xl mb-4 group-hover:text-primary transition-colors">Diseños</h3>
+            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+              Arte y creatividad en tu cabello con diseños personalizados y modernos. Incluye perfilado de cejas.
+            </p>
+            <div class="flex justify-between items-center mt-auto border-t border-outline-variant/20 pt-6">
+              <span class="font-serif text-2xl text-primary">$50 - $100</span>
+              <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corte + Barba -->
+        <div class="group bg-surface-container hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden border border-outline-variant/10 flex flex-col h-full rounded-none">
+          <div class="aspect-[3/2] overflow-hidden">
+            <img
+              src="https://i.pinimg.com/736x/56/c2/da/56c2da7d058f6d87d29b9cb069db6cfe.jpg"
+              alt="Corte + Barba"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+            >
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <h3 class="font-serif text-2xl mb-4 group-hover:text-primary transition-colors">Corte + Barba</h3>
+            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+              La experiencia completa de transformación y cuidado para el caballero. Incluye perfilado de cejas.
+            </p>
+            <div class="flex justify-between items-center mt-auto border-t border-outline-variant/20 pt-6">
+              <span class="font-serif text-2xl text-primary">$230</span>
+              <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── GALLERY ─── -->
+  <section id="gallery" class="py-32 bg-surface">
+    <div class="max-w-7xl mx-auto px-8">
+
+      <h2 class="font-serif text-5xl mb-16 text-center italic">Signature Looks</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[800px]">
+
+        <!-- Large: col 1–2, row 1–2 -->
+        <div class="md:col-span-2 md:row-span-2 relative overflow-hidden group">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnfv_A3KIOSkVUk8QjAWv657WxYUuNYlHUMTHi4QjGAIcmROHy4V4h2qH5-qHVNWSLgrDwE1QUZOcxg7VBEj3ydcPyX-3lvV67c4qw7rGOWChzTyGy8SIvYLQEvMKeZUHufsMAUUIwWuOgFcP05bbnq3KWwNJbSu-_OUIBm9dZcwWe2r8yko97TK90-YDAJJzkkDNEQIPKC9ZvM4NVqd2_runXuC8ZD4yHf8KGV9-ZncDqvn5fg7F0qIySENX7krSTkpBKWPbqBzI"
+            alt="Sharp haircut"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+          >
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white border-b border-white tracking-widest uppercase text-xs">View Detail</span>
+          </div>
+        </div>
+
+        <!-- Col 3, row 1 -->
+        <div class="md:col-span-1 md:row-span-1 relative overflow-hidden group">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi5o5Ph9hdxwAtkkmQmoEf7gtwbrEXGUdJfDlSx-Mvl1xt8aQpiWRqffS4Cynunbd593u1X8TfM0T1XJ3_bBtNmzlHG_ife7QHsirqqOabCNOwqvEcOXy2wwFzUfrqCC4G8yKTg8c82Rv5LtAFfW8b0cC4IkCMMJlR9tn3G6JyZgz4fqzjf3e1hk8uizn0zSbibfk7hdLPQsyfpYGYfrjwpnrhZOpDPsoAVXBVOd_voxnd0JpCFlPaVtDAnRTKs0UIVKbm0hvUgMg"
+            alt="Fade detail"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+          >
+        </div>
+
+        <!-- Col 4, row 1–2 -->
+        <div class="md:col-span-1 md:row-span-2 relative overflow-hidden group">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg78Fyvoe7YbOKGgfrTF71WjRZ0n9JgpmxdyfMBzB2uPjcK9qbTmNi3RgC78neON6UGub3tJWeHKLa-okBaUZbKfVt8cRwyDTEy9SMDFz2tGPw1Fu3bnbg1TqdrUc8JzgaLcWE8wC8q1Ayg7L9YQwFhqgEazsKVFts_rb7HdGMo2WecoJ8rSKa5bTYDZy12z-cGEEnuGAcFxfwH6JobSRtE9PmNrFNwXo6yReYihi8iDcmlhIe72zMTFGYyIJ80xs2gO_8cwEAIOA"
+            alt="Shave ceremony"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+          >
+        </div>
+
+        <!-- Col 3, row 2 -->
+        <div class="md:col-span-1 md:row-span-1 relative overflow-hidden group">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsJro6Vh0SC1eCTs9d3GcI-8IdOkWWBa93zel2lqVhC8Ws1tqIoC3KcRjWuOb2dOnsF0XLCSL-3cxbwZZJQMpjwrkLRwqIe-vngY7eVA8J1ZeyoN3yCUm6KaZtjqwRRewwCtowuoCUpttl1WsNRuwNv4Ki4wRXIcakfRYG_IYMHO3mm3LxDBc3ILfzpTvpXgI-I64hhyjGqG1tmJ1yDRzETKH7NW1-bvkL-20-wdT15mfEeQedIqu4pJUS7-4DeFCMxkx21nflBnk"
+            alt="Barber chair"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+          >
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section class="py-32 bg-surface-container-lowest">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+        <!-- Testimonio 1 -->
+        <div class="bg-surface p-12 relative border-t-2 border-primary">
+          <span class="font-serif text-6xl text-primary/20 absolute top-4 right-8">"</span>
+          <div class="flex gap-1 mb-6">
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+          </div>
+          <p class="font-body text-lg italic mb-8 leading-relaxed">
+            "La mejor experiencia que he tenido. La atención al detalle en el fade es de otro nivel. Definitivamente mi nuevo lugar."
+          </p>
+          <h5 class="font-bold uppercase tracking-widest text-xs text-primary">— CARLOS MENDOZA</h5>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="bg-surface p-12 relative border-t-2 border-primary md:mt-12">
+          <span class="font-serif text-6xl text-primary/20 absolute top-4 right-8">"</span>
+          <div class="flex gap-1 mb-6">
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+          </div>
+          <p class="font-body text-lg italic mb-8 leading-relaxed">
+            "Ambiente sofisticado y barberos que realmente saben lo que hacen. El ritual de toalla caliente es una joya."
+          </p>
+          <h5 class="font-bold uppercase tracking-widest text-xs text-primary">— RICARDO SILVA</h5>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="bg-surface p-12 relative border-t-2 border-primary">
+          <span class="font-serif text-6xl text-primary/20 absolute top-4 right-8">"</span>
+          <div class="flex gap-1 mb-6">
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+            <span class="material-symbols-outlined text-primary text-sm fill-icon">star</span>
+          </div>
+          <p class="font-body text-lg italic mb-8 leading-relaxed">
+            "Excelente servicio al cliente. Me ayudaron a encontrar un estilo que realmente me favorece. Muy recomendable."
+          </p>
+          <h5 class="font-bold uppercase tracking-widest text-xs text-primary">— JORGE LUIS</h5>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BOOKING ─── -->
+  <section class="py-32 bg-surface">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="bg-surface-container p-12 md:p-20 shadow-2xl relative">
+
+        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 -z-10 blur-3xl"></div>
+
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-5xl mb-4">Reserva tu Experiencia</h2>
+          <p class="text-outline uppercase tracking-widest text-xs">Asegura tu lugar en nuestro atelier</p>
+        </div>
+
+        <form class="space-y-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Nombre completo"
+                class="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-all text-on-surface placeholder:text-outline/50 font-body"
+              >
+            </div>
+
+            <div class="relative">
+              <select class="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-all text-on-surface font-body appearance-none">
+                <option class="bg-surface" disabled selected>Seleccionar servicio</option>
+                <option class="bg-surface">Corte de Cabello</option>
+                <option class="bg-surface">Barba</option>
+                <option class="bg-surface">Diseños</option>
+                <option class="bg-surface">Corte + Barba</option>
+              </select>
+            </div>
+
+            <div class="relative">
+              <input
+                type="date"
+                class="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-all text-on-surface font-body"
+              >
+            </div>
+
+            <div class="relative">
+              <input
+                type="time"
+                class="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-all text-on-surface font-body"
+              >
+            </div>
+
+          </div>
+
+          <div class="flex justify-center pt-8">
+            <button type="submit" class="gold-gradient text-on-primary px-20 py-5 text-sm uppercase tracking-widest font-extrabold gold-glow w-full md:w-auto">
+              Confirmar Cita
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT & MAP ─── -->
+  <section class="grid grid-cols-1 md:grid-cols-2 h-[600px] bg-surface-container-lowest overflow-hidden">
+
+    <!-- Info -->
+    <div class="p-20 flex flex-col justify-center">
+      <h2 class="font-serif text-5xl mb-12">Contacto</h2>
+      <div class="space-y-8">
+
+        <div class="flex items-center gap-6">
+          <span class="material-symbols-outlined text-primary">location_on</span>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-outline mb-1">Ubicación</p>
+            <p class="text-lg">Av. de la Libertad 123, Polanco, CDMX</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <span class="material-symbols-outlined text-primary">call</span>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-outline mb-1">Teléfono</p>
+            <p class="text-lg">+52 (55) 1234-5678</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-outline mb-1">Horarios</p>
+            <p class="text-lg">Lun - Sáb: 10am - 9pm | Dom: 11am - 6pm</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="relative group cursor-pointer overflow-hidden">
+      <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-all z-10 pointer-events-none"></div>
+      <img
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ82S_yt5eIZXsBpcxLOrPyLJFArwgvs-eNYVVJs_W1hd7jr5mb7Xfbs5M0Of4wZDvmKs3vwxFNnMek9PdDv5LAk14ByPFKElPZsvQPPkALxXgCKtnWGiumVlqvHViFE353e4gmUc2uFa4OX1KpAiGRxsOwIGPZ8u-UqRgSl0KrxeBmWzhfJeb4-HIUF34CC1Madhi6RLKLZypI1XApAbUZBBX7d3EitpHILVNZiQBdxI1Q6wm3tB_e9qt5i0vqdfJVDXot5gqfDo"
+        alt="Map location"
+        class="w-full h-full object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
+      >
+      <div class="absolute inset-0 flex items-center justify-center z-20">
+        <div class="bg-surface/90 px-8 py-4 border border-primary">
+          <span class="uppercase tracking-widest text-xs font-bold text-primary">Ver en Google Maps</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="bg-[#0e0e0e] w-full py-12 px-8 border-t border-[#4d4635]/20">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+
+      <div class="text-xl font-serif text-[#d4af37]">Fenix Barbershop</div>
+
+      <div class="flex gap-8">
+        <a href="#" class="text-[#99907c] hover:text-[#f2ca50] transition-all font-sans text-sm uppercase tracking-widest opacity-80 hover:opacity-100">Instagram</a>
+        <a href="#" class="text-[#99907c] hover:text-[#f2ca50] transition-all font-sans text-sm uppercase tracking-widest opacity-80 hover:opacity-100">Facebook</a>
+        <a href="#" class="text-[#99907c] hover:text-[#f2ca50] transition-all font-sans text-sm uppercase tracking-widest opacity-80 hover:opacity-100">WhatsApp</a>
+      </div>
+
+      <p class="text-[#99907c] font-sans text-sm uppercase tracking-widest opacity-80">© 2024 Fenix Barbershop. All Rights Reserved.</p>
+
+    </div>
+  </footer>
+
+  <!-- ─── FLOATING WHATSAPP ─── -->
+  <a href="#" class="fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white w-14 h-14 flex items-center justify-center rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.607zM7.994 14.52a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
+  </a>
+
+</body>
+</html>

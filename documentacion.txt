@@ -1,0 +1,82 @@
+1. Descripción General
+
+La landing page de Fenix Barbershop es un sitio web diseñado para presentar la barbería, mostrar sus servicios y facilitar la reserva de citas.
+
+El objetivo principal es convertir visitantes en clientes, ofreciendo una experiencia visual atractiva y fácil de usar.
+
+🎯 2. Objetivos del Proyecto
+Mostrar información clara sobre la barbería
+Destacar servicios y precios
+Generar confianza mediante imágenes y testimonios
+Facilitar el contacto
+Permitir agendar citas de forma rápida
+👤 3. Público Objetivo
+Hombres entre 18 y 45 años
+Interesados en estilo, cuidado personal y tendencias
+Clientes locales que buscan barberías modernas
+🧩 4. Estructura del Sitio
+🏠 4.1 Inicio (Hero Section)
+Imagen 
+Frase principal “Tu estilo, nuestra precisión”
+Botón: Agendar cita
+✂️ 4.2 Sobre Nosotros
+Historia breve de la barbería
+Valores (calidad, estilo, profesionalismo)
+Imagen del equipo o local
+💈 4.3 Servicios
+Lista de servicios:
+Corte de cabello
+Fade
+Barba
+Afeitado
+Precios visibles
+Diseño en tarjetas
+🖼️ 4.4 Galería
+Imágenes de trabajos realizados
+Estilo visual atractivo
+⭐ 4.5 Testimonios
+Opiniones de clientes
+Refuerzan confianza y reputación
+📅 4.6 Agendar Cita
+Formulario:
+Nombre
+Servicio
+Fecha
+Hora
+Botón de confirmación
+📞 4.7 Contacto
+Dirección
+Teléfono
+WhatsApp
+Mapa integrado
+🔚 4.8 Footer
+Redes sociales
+Horarios de atención
+Derechos reservados
+🎨 5. Diseño y Estilo
+Colores: negro, blanco y dorado
+Tipografía elegante + moderna
+Diseño minimalista
+Uso de imágenes de alta calidad
+Animaciones suaves
+⚙️ 6. Funcionalidades
+Diseño responsive (móvil, tablet, PC)
+Navegación con scroll suave
+Botón flotante de WhatsApp
+Formulario funcional
+Optimización de carga
+🛠️ 7. Tecnologías 
+HTML5
+CSS3 / Tailwind CSS
+JavaScript
+
+📈 8. Beneficios
+Mejora la presencia online
+Aumenta clientes potenciales
+Facilita reservas
+Genera confianza en la marca
+🚀 9. Futuras Mejoras
+Sistema real de reservas
+Panel de administración
+Integración con pagos online
+Blog o contenido de estilo
